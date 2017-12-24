@@ -11,13 +11,24 @@ class WeatherStation
 	const char* _stationPassword;
 	const char* _stationName;
 	
-	char* _server = "weatherstation.wunderground.com"; //Default Wunderground rapidfire server
+	char* _server = "rtupdate.wunderground.com";
+	/*
+	RapidFire server for WeatherUnderground network
+	More details here : http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol#RapidFire_Updates
+	*/
 	char* _webpage = "GET /weatherstation/updateweatherstation.php?"; //Webpage to update weather stations
 	
 	float _tempF = NULL;
 	float _humidity = NULL;
+	/*
+	Default weather variables
+	*/
 	
-	String urlencode(String str); //Stolen function https://github.com/zenmanenergy/ESP8266-Arduino-Examples/blob/master/helloWorld_urlencoded/urlencode.ino
+	String urlencode(String str);
+	/*
+	A function that convert strings to escaped urls
+	Function stolen here : https://github.com/zenmanenergy/ESP8266-Arduino-Examples/blob/master/helloWorld_urlencoded/urlencode.ino
+	*/
 	
 	public:
 	
