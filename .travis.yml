@@ -10,7 +10,7 @@ before_install:
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
   - cd /usr/local/share/arduino/libraries
   - wget https://codeload.github.com/storca/ArdUnground/zip/master
-  - unzip ArdUnground-master.zip
+  - unzip ArdUnground-master
   - mv ArdUnground-master ArdUnground
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
