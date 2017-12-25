@@ -16,6 +16,7 @@ See https://www.arduino.cc/en/Guide/Libraries for further information.
 * [Weather-Station.ino](https://github.com/danfein/Ethernet-Weather/blob/master/Weather-Station.ino) - Wunderground upload via arduino
 * [Wundergound PWS Protocol](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol) - Documentation for Wunderground PWS protocol
 * [UrlEncode function](https://github.com/zenmanenergy/ESP8266-Arduino-Examples/blob/master/helloWorld_urlencoded/urlencode.ino) - An arduino function to escape URLs
+* [Ethernet Library](https://www.arduino.cc/en/Tutorial/WebClient) - Documentation for Ethernet library
 
 ## Installation
 
