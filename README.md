@@ -6,8 +6,8 @@ ArdUnground is an arduino library that update weather station data to WeatherUnd
 
 ## Prerequisites
 
-You need to have the Ethernet.h library installed (native arduino library)
-See https://www.arduino.cc/en/Guide/Libraries for further information
+You need to have the Ethernet.h library installed (native arduino library).  
+See https://www.arduino.cc/en/Guide/Libraries for further information.
 
 
 ## Reference and projects used for this library
@@ -17,8 +17,8 @@ See https://www.arduino.cc/en/Guide/Libraries for further information
 
 ## Installation
 
-Download the project as a zip file and extract the content in your arduino/libraries folder as usual
-See https://www.arduino.cc/en/Guide/Libraries for further information
+Download the project as a zip file and extract the content in your arduino/libraries folder as usual.  
+See https://www.arduino.cc/en/Guide/Libraries for further information.
 
 ## Usage
 
@@ -33,7 +33,7 @@ Declare a 'WeatherStation' object :
 ```Arduino
 WeatherStation station("your station id", "your station password", "the station name");
 ```
-/!\ The communications are made via http which means that your password may be intercepted /!\
+/!\ The communications are made via http which means that your password may be intercepted /!\  
 Use a unique password for you weather station
 
 Declare an 'EthernetClient' object:
