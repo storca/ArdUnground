@@ -2,7 +2,9 @@
 
 ![Travis ci](https://travis-ci.org/storca/ArdUnground.svg?branch=master)
 
-ArdUnground is an arduino library that update weather station data to WeatherUnderground or another rapidfire server
+ArdUnground is an arduino library that update weather station data to WeatherUnderground or another rapidfire server.  
+
+I haven't tested it yet, so it might not be functionnal at this time c:
 
 ## Prerequisites
 
