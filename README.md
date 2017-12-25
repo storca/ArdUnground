@@ -57,7 +57,9 @@ WeatherStation.setHumidity(float humidity);
 More functions to come here, this is just a draft of the library
 
 Post the PWS data to WeatherUnderground :
-Where 'timestamp' is optional, it's "now" by default : the timestamp "now" will be interpreted as the current time (UTC) by the rapidfire server. See http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol_
+Where 'timestamp' is optional, it's "now" by default : the timestamp "now" will be interpreted as the current time (UTC+0) by the rapidfire server.  
+The content of the 'timestamp' variable will be url escaped automaticly, no need to do it.  
+See http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol_ for more information
 ```Arduino
 WeatherStation.post(EthernetClient client, String timestamp = "now");
 ```
