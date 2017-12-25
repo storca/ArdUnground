@@ -23,21 +23,21 @@ See https://www.arduino.cc/en/Guide/Libraries for further information
 ## Usage
 
 First include the two libraries as follow :
-```
+```C++
 #include <Ethernet.h>
 #include <ArdUnground.h>
 ```
 
 Declare a 'WeatherStation' object :
 
-```
+```Arduino
 WeatherStation station("your station id", "your station password", "the station name");
 ```
 /!\ The communications are made via http which means that your password may be intercepted /!\
 Use a unique password for you weather station
 
 Declare an 'EthernetClient' object:
-```
+```Arduino
 EthernetClient client;
 ```
 Set your 'client' object as usual
@@ -45,12 +45,12 @@ Set your 'client' object as usual
 ### Functions available
 
 Set the temperature to send in Farenheight :
-```
+```Arduino
 WeatherStation.setTempF(float tempF);
 ```
 
 Set the humidity to send in % :
-```
+```Arduino
 WeatherStation.setHumidity(float humidity);
 ```
 
@@ -58,13 +58,13 @@ More functions to come here, this is just a draft of the library
 
 Post the PWS data to WeatherUnderground :
 Where 'timestamp' is optional, it's "now" by default : the timestamp "now" will be interpreted as the current time (UTC) by the rapidfire server. See http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol_
-```
+```Arduino
 WeatherStation.post(EthernetClient client, String timestamp = "now");
 ```
 
 ### Full example
 [WeatherStation.ino](https://github.com/storca/ArdUnground/blob/master/examples/WeatherStation/WeatherStation.ino)
-```
+```Arduino
 //Local directory
 #include <ArdUnground.h>
 //Native library
