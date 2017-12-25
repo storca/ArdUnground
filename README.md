@@ -55,3 +55,8 @@ Where 'timestamp' is optional, it's "now" by default : the timestamp "now" will 
 ```
 WeatherStation.post(EthernetClient client, String timestamp = "now");
 ```
+
+## Reference and projects used for this library
+* [Weather-Station.ino](https://github.com/danfein/Ethernet-Weather/blob/master/Weather-Station.ino) - Wunderground upload via arduino
+* [Wundergound PWS Protocol](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol) - Documentation for Wunderground PWS protocol
+* [UrlEncode function](https://github.com/zenmanenergy/ESP8266-Arduino-Examples/blob/master/helloWorld_urlencoded/urlencode.ino) - An arduino function to escape URLs
