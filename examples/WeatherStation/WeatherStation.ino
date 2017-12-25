@@ -29,9 +29,11 @@ void setup()
   Serial.println("connecting...");
   delay(1000);
   
-	station.set("weatherstation.wunderground.com", "GET /weatherstation/updateweatherstation.php?");
+	station.set("rtupdate.wunderground.com", "GET /weatherstation/updateweatherstation.php?");
   /*
    Not necessary, these values are set by default in ArdUnderground.h
+   There is another server for WunderGround : weatherstation.wunderground.com
+   I don't know if it's a test server or anything else :p
    */
 }
 
