@@ -14,11 +14,11 @@ before_install:
   - mv master ArdUnground.zip
   - unzip ArdUnground.zip
   - mv ArdUnground-master ArdUnground
-#install:
-#  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
-#  - arduino --install-library "https://codeload.github.com/storca/ArdUnground/zip/master"
+install:
+  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
+  - arduino --install-library "https://codeload.github.com/storca/ArdUnground/zip/master"
 script:
-  - arduino --verify --board arduino:avr:uno $PWD/examples/WeatherStation/WeatherStation.ino
+  - arduino --verify --board --verbose arduino:avr:uno $PWD/examples/WeatherStation/WeatherStation.ino
 notifications:
   email:
     on_success: change
