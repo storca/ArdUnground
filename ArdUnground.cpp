@@ -25,7 +25,7 @@ void WeatherStation::set(char* server, char* webpage)
 	this->_server = server;
 	this->_webpage = webpage;
 }
-bool WeatherStation::post(EthernetClient client, String timestamp = "now")
+bool WeatherStation::post(EthernetClient client, String timestamp)
 {
 	//Based on https://github.com/danfein/Ethernet-Weather/blob/master/Weather-Station.ino
 	
