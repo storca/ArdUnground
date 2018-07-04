@@ -43,7 +43,7 @@ EthernetClient client;
 ```
 Set your 'client' object as usual
 
-### Functions available
+### Some functions
 
 Set the temperature to send in Farenheight :
 ```Arduino
@@ -54,6 +54,22 @@ Set the humidity to send in % :
 ```Arduino
 WeatherStation.setHumidity(float humidity);
 ```
+
+Set the dew point to send in Farenheight :
+```Arduino
+WeatherStation.setDewptf(int dewptf);
+```
+
+Set the wind direction to send in degrees :
+```Arduino
+WeatherStation.setWinddir(int windir);
+```
+
+Set the wind speed to send in mph :
+```Arduino
+WeatherStation.setWindspeedmph(int windspeedmph);
+```
+
 
 More functions to come here, this is just a draft of the library
 
@@ -87,7 +103,7 @@ WeatherStation station("id", "password", "Arduino Custom station");
 void setup()
 {
   Serial.begin(9600);
-  
+
   if (!Ethernet.begin(mac))
   {
     Serial.println("Failed to configure Ethernet using DHCP");
@@ -98,7 +114,7 @@ void setup()
   // give the Ethernet shield a second to initialize:
   Serial.println("connecting...");
   delay(1000);
-  
+
 	station.set("rtupdate.wunderground.com", "GET /weatherstation/updateweatherstation.php?");
   /*
    Not necessary, these values are set by default in ArdUnderground.h
