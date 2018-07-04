@@ -23,6 +23,7 @@ class WeatherStation
 	*/
 	float _tempF = NULL;
 	float _humidity = NULL;
+	int _dewptf = NULL;
 
 	//Wind
 	int _winddir = NULL;
@@ -52,7 +53,7 @@ class WeatherStation
 
 	void setTempF(float tempF);
 	void setHumidity(float humidity);
-
+	void setDewptf(int dewptf);
 	//Wind
 	bool setWinddir(int windir);
 	bool setWindspeedmph(int windspeedmph);

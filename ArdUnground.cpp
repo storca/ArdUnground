@@ -39,6 +39,14 @@ void WeatherStation::setHumidity(float humidity)
 	}
 }
 /**
+ * Set dew point in °F
+ * @param dewptf Dew point in °F
+ */
+void WeatherStation::setDewptf(int dewptf)
+{
+	this->_dewptf = dewptf;
+}
+/**
  * Set wind direction
  * @param  winddir Wind direction
  * @return         true if success
@@ -160,6 +168,11 @@ bool WeatherStation::post(EthernetClient client, String timestamp)
 		{
 			client.print("&tempf=");
 			client.print(this->_tempF);
+		}
+		if(this->_dewptf != NULL)
+		{
+			client.print("&dewptf=");
+			client.print(this->_dewptf);
 		}
 		if(this->_winddir != NULL)
 		{
