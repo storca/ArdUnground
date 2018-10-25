@@ -18,8 +18,12 @@ See https://www.arduino.cc/en/Guide/Libraries for further information.
 
 ## Installation
 
+### Arduino IDE
 Download the project as a zip file and extract the content in your arduino/libraries folder as usual.  
 See https://www.arduino.cc/en/Guide/Libraries for further information.
+
+### Contribution
+In atom or vscode, run Crtl+Shift+P then search for 'git clone' and eter the git url https://github.com/storca/ArdUnground.git
 
 ## Usage
 
