@@ -31,7 +31,7 @@ void WeatherStation::setHumidity(float humidity)
 {
 	if(humidity > 100.0 || humidity < 0.0)
 	{
-		this->_humidity = NULL;
+		this->_humidity = UNSET_VAR;
 	}
 	else
 	{
@@ -55,7 +55,7 @@ bool WeatherStation::setWinddir(int winddir)
 {
 	if(winddir > 360 || winddir < 0)
 	{
-		this->_winddir = NULL;
+		this->_winddir = UNSET_VAR;
 		return false;
 	}
 	else
@@ -73,7 +73,7 @@ bool WeatherStation::setWindspeedmph(int windspeedmph)
 {
 	if(windspeedmph < 0)
 	{
-		this->_windspeedmph = NULL;
+		this->_windspeedmph = UNSET_VAR;
 		return false;
 	}
 	else
@@ -88,11 +88,11 @@ bool WeatherStation::setWindspeedmph(int windspeedmph)
  * @param  winddir Wind direction
  * @return         true if success
  */
-bool WeatherStation::setWindgustdir(int winddir)
+bool WeatherStation::setWindgustdir(int windgustdir)
 {
 	if(windgustdir > 360 || windgustdir < 0)
 	{
-		this->_windgustdir = NULL;
+		this->_windgustdir = UNSET_VAR;
 		return false;
 	}
 	else
@@ -106,11 +106,11 @@ bool WeatherStation::setWindgustdir(int winddir)
  * @param  windspeedmph Speed of the wind
  * @return              true is success
  */
-bool WeatherStation::setWindgustmph(int windspeedmph)
+bool WeatherStation::setWindgustmph(int windgustmph)
 {
 	if(windgustmph < 0)
 	{
-		this->_windgustmph = NULL;
+		this->_windgustmph = UNSET_VAR;
 		return false;
 	}
 	else
@@ -159,37 +159,37 @@ bool WeatherStation::post(EthernetClient client, String timestamp)
 		*/
 
 		//Weather data
-		if (this->_humidity != NULL)
+		if (this->_humidity != UNSET_VAR)
 		{
 			client.print("&humidity=");
 			client.print(this->_humidity);
 		}
-		if (this->_tempF != NULL)
+		if (this->_tempF != UNSET_VAR)
 		{
 			client.print("&tempf=");
 			client.print(this->_tempF);
 		}
-		if(this->_dewptf != NULL)
+		if(this->_dewptf != UNSET_VAR)
 		{
 			client.print("&dewptf=");
 			client.print(this->_dewptf);
 		}
-		if(this->_winddir != NULL)
+		if(this->_winddir != UNSET_VAR)
 		{
 			client.print("&winddir=");
 			client.print(this->_winddir);
 		}
-		if(this->_windgustdir != NULL)
+		if(this->_windgustdir != UNSET_VAR)
 		{
 			client.print("&windgustdir=");
 			client.print(this->_windgustdir);
 		}
-		if(this->_windgustmph != NULL)
+		if(this->_windgustmph != UNSET_VAR)
 		{
 			client.print("&windgustmph=");
 			client.print(this->_windgustmph);
 		}
-		if(this->_windspeedmph != NULL)
+		if(this->_windspeedmph != UNSET_VAR)
 		{
 			client.print("&windspeedmph=");
 			client.print(this->_windspeedmph);

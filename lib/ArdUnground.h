@@ -3,6 +3,8 @@
 
 #include <Ethernet.h>
 
+#define UNSET_VAR -460
+
 class WeatherStation
 {
 
@@ -21,15 +23,15 @@ class WeatherStation
 	/*
 	Default weather variables
 	*/
-	float _tempF = NULL;
-	float _humidity = NULL;
-	int _dewptf = NULL;
+	float _tempF = UNSET_VAR;
+	float _humidity = UNSET_VAR;
+	int _dewptf = UNSET_VAR;
 
 	//Wind
-	int _winddir = NULL;
-	int _windspeedmph = NULL;
-	int _windgustdir = NULL;
-	int _windgustmph = NULL;
+	int _winddir = UNSET_VAR;
+	int _windspeedmph = UNSET_VAR;
+	int _windgustdir = UNSET_VAR;
+	int _windgustmph = UNSET_VAR;
 
 
 	String urlencode(String str);
