@@ -19,7 +19,7 @@ See https://www.arduino.cc/en/Guide/Libraries for further information.
 ## Installation
 
 ### Arduino IDE
-Download the project as a zip file and extract the content in your arduino/libraries folder as usual.  
+Grab the latest release (ArdUnground[...].zip) [here](https://github.com/storca/ArdUnground/releases) and extract the content in your arduino/libraries folder as usual.  
 See https://www.arduino.cc/en/Guide/Libraries for further information.
 
 ### Contribution
